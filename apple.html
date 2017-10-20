@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <script src="./js/jquery-1.9.1.js" charset="utf-8"></script>
+    <script src="./js/bootstrap.js" charset="utf-8"></script>
+    <script src="./js/bootstrap.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style media="screen">
+
+        @media screen and (max-width: 768px){
+          #ul>li{
+            width:80%;
+            border-bottom: 1px solid #777;
+            margin-top: 42px;
+          }
+          #temp1 h2,#temp2 h2,#temp3 h2,h4{
+            font-size: 32px;
+            margin-bottom: 0px;
+          }
+          #temp1 h3,#temp2 h3,#temp3 h3,h5{
+            font-size: 19px;
+            margin-top: 2px;
+            margin-bottom: 30px;
+          }
+          #img1{
+            height: 357px;
+            background-size: 267px 357px;
+            background:url(https://images.apple.com/v/home/dk/images/tier-one-heroes/iphone-8/iphone_8_small.jpg) no-repeat center center;
+          }
+          #img2{
+            height:333px;
+            background-size: 167px 33px;
+            background: url(https://images.apple.com/v/home/dk/images/tier-one-heroes/iphone-x/iphone_x_small.jpg) no-repeat center center;
+          }
+          #img3{
+            height:338px;
+            background-size: 167px 33px;
+            background: url(https://images.apple.com/cn/home/images/tier-one-heroes/apple-watch/watch_small.jpg) no-repeat center center;
+          }
+          #series{
+            font-size: 6px;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+          #img4{
+            height: 311px;
+            background-size: 420px 301px;
+            background:url(https://images.apple.com/cn/home/images/half-width-promos/ios_alt_small.jpg) no-repeat center center;
+          }
+          #img5{
+            height: 240px;
+            background-size: 339px 240px;
+            background: url(https://images.apple.com/cn/home/images/half-width-promos/watchos_small.jpg) no-repeat center center;
+          }
+          #img6{
+            height: 500px;
+            background-size: 736px 500px;
+            background: url(https://images.apple.com/cn/home/images/half-width-promos/trade_up_small.jpg) no-repeat center center;
+          }
+          #img7{
+            height: 203px;
+            background-size: 348px 203px;
+            background: url(https://images.apple.com/cn/home/images/half-width-promos/macos_high_sierra_small.jpg) no-repeat center center;
+          }
+          .lastImg{
+            height: 460px;
+            background-color: #f8f8f8;
+            margin-bottom: 10px;
+          }
+          #thumbnail{
+            padding: 0px;
+          }
+          #last button{
+            border: 0px;
+          }
+          #last div{
+            margin: 0px;
+          }
+          #last div{
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+          }
+          #navbar-header{
+            border-bottom: 1px solid #f8f8f8;
+          }
+          #nav ul{
+            height: 1000px;
+          }
+        }
+        @media screen and (min-width: 767px){
+          #ul>li{
+            width:11.11%;
+            text-align: center;
+          }
+          #temp1 h2,#temp2 h2,#temp3 h2,h4{
+            font-size: 56px;
+            margin-top: 6px;
+          }
+          #temp1 h3,#temp2 h3,#temp3 h3,h5{
+            font-size: 27px;
+            margin-bottom: 30px;
+          }
+          #img1{
+            height: 395px;
+            background-size: 561px 395px;
+            background-repeat: no-repeat;
+            background:url(https://images.apple.com/v/home/dk/images/tier-one-heroes/iphone-8/iphone_8_large.jpg) no-repeat center center;
+          }
+          #img2{
+            height:194px;
+            background-size: 904px 194px;
+            background: url(https://images.apple.com/v/home/dk/images/tier-one-heroes/iphone-x/iphone_x_large.jpg) no-repeat center center;
+          }
+          #series{
+            font-size: 10px;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+          #img3{
+            height: 341px;
+            background-size: 767px 341px;
+            background: url(https://images.apple.com/cn/home/images/tier-one-heroes/apple-watch/watch_large.jpg) no-repeat center center;
+          }
+          #img4{
+            height: 390px;
+            background-size: 516px 369px;
+            background: url(https://images.apple.com/cn/home/images/half-width-promos/ios_large.jpg) no-repeat center center;
+          }
+          #img5{
+            height: 392px;
+            background-size: 553px 392px;
+            background: url(https://images.apple.com/cn/home/images/half-width-promos/watchos_large.jpg) no-repeat center center;
+          }
+          #img6{
+            height: 580px;
+            background-size: 1262px 580px;
+            background: url(https://images.apple.com/cn/home/images/half-width-promos/trade_up_large.jpg) no-repeat center center;;
+          }
+          #img7{
+            height: 405px;
+            background-size: 499px 292px;
+            background: url(https://images.apple.com/cn/home/images/half-width-promos/macos_high_sierra_large.jpg) no-repeat center center;
+          }
+          #last>div{
+            display: inline-block;
+            width: 19.7%;
+            border: 0px;
+          }
+          #last>div div{
+            display: inline-block;
+            width: 100%;
+          }
+          #xuan{
+            padding-top: 0px;
+            padding-bottom: 5px;
+            height: 20px;
+          }
+          #last ul{
+            width:100%;
+          }
+          #navbar1,#navbar2,#navbar3,#navbar4,#navbar5,#navbar6,#navbar7{
+            padding: 0px;
+          }
+          #navbar1 a,#navbar2 a,#navbar3 a,#navbar4 a,#navbar5 a,#navbar6 a,#navbar7 a{
+            padding: 0px;
+          }
+
+          #last>div{
+            float: left;
+            margin-top: 40px;
+          }
+          #last div{
+            border: 0px;
+          }
+          #last>div:nth-of-type(1){
+            margin-left: 10px;
+          }
+          #last a:hover{
+            text-decoration: underline;
+          }
+          #bagBox{
+            left:-77px;
+            display: none;
+          }
+          #top{
+            display: block;
+          }
+        }
+
+
+        #top{
+          height: 44px;
+          color: #a8a8aa;
+          background-color: #444444;
+          /*font-size: 12px;*/
+        }
+        .col-xs-2{
+          font-size: 12px;
+          text-align: right;
+        }
+        .col-md-1,.col-sm-1{
+          font-size: 12px;
+          /*text-align: center;*/
+        }
+        .row{
+          line-height: 44px;
+        }
+        #nav{
+          margin: 0px;
+          border: 0px;
+          border-radius: 0;
+          background-color: #32302d;
+        }
+        ul>li{
+          text-align: center;
+          text-align: left;
+          margin: 0 auto;
+        }
+        ul{
+          background-color: #32302d;
+        }
+        #ul>li>a{
+          color: white;
+        }
+        #ul a:hover{
+          opacity: .5;
+        }
+        #button{
+          border: 0px;
+          float: left;
+          background-color: #32302d;
+        }
+        #navbar{
+          border-top: 0px;
+        }
+        #temp1,#temp2{
+          padding-bottom: 0px;
+          margin-bottom: 12px;
+        }
+        #temp1{
+          background-color:#f9f0eb;
+          margin-bottom: 10px;
+        }
+        #temp2,#temp3{
+          background-color: #fafafa;
+          margin-bottom: 10px;
+        }
+        #temp1 h2,#temp2 h2,#temp3 h2,h4{
+          padding-top: 39px;
+          color: #111;
+        }
+
+        #temp1 h2,#temp1 h3,#temp2 h2,#temp2 h3,#temp3 h2,#temp3 h3{
+          text-align: center;
+        }
+
+        #series{
+          display: block;
+          text-align: center;
+          color: red;
+        }
+        .caption{
+          background-color: #fafafa;
+        }
+        .thumbnail{
+          border: 0px;
+          /*padding: 0px;*/
+        }
+        h4{
+          text-align: center;
+        }
+        h5{
+          text-align: center;
+        }
+        #towDivLeft{
+          /*background-color: #fafafa;*/
+          /*margin-right: 1px;*/
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+        #towDivRight{
+          padding: 0px;
+          padding-right: 5px;
+        }
+        #thumbnail{
+          margin-bottom: 0px;
+          /*padding: 0px;*/
+        }
+        #caption{
+          padding: 0px;
+        }
+        #towDiv{
+          width:100%;
+          padding: 0px;
+          margin: 0px;
+        }
+        #bottom{
+          background-color: #f8f8f8;
+        }
+        #bottom a{
+          color: #555;
+          font-size: 8px;
+          padding: 3px 0px;
+          text-decoration: none;
+        }
+        #bottom li {
+          float: none;
+        }
+        #bagBox{
+          display: none;
+          position: absolute;
+          top:33px;
+        }
+        #bag{
+          background-color: white;
+          border: 1px solid #f8f8f8;
+          width:280px;
+          padding: 0 20px;
+          height: 307px;
+        }
+        #bag ul{
+          background-color: white;
+          padding-left: 0px;
+        }
+        #bagText{
+          color: #888;
+          padding: 35px 0;
+          margin: 0;
+          text-align: center;
+        }
+        #bagBox li{
+          list-style: none;
+          height: 43px;
+          line-height: 43px;
+          border-top: 1px solid #e3e3e3;
+        }
+        #bagBox li span{
+          line-height: 43px;
+          padding-right: 10px;
+        }
+        #bagBox a{
+          cursor: pointer;
+        }
+        #caret{
+          border-bottom: 10px solid white;
+          border-top: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-left: 10px solid transparent;
+        }
+        #xuan{
+          color:#000;
+          font-size: 8px;
+        }
+        #last{
+          background-color: #f8f8f8;
+        }
+        .lastTag{
+          background-color: #f8f8f8;
+        }
+        #logoBox .input-group{
+          margin:10px 0px;
+        }
+        #logoBox>div{
+          width: 100%;
+        }
+        #logoBox h3{
+          padding:5px;
+          border-bottom:1px solid #ddd;
+          }
+        #logoBox li{
+          list-style-type:square;
+          margin:10px 0;
+        }
+        #logoBox em{
+          color:#c7254e;
+          font-style: inherit;
+          background-color: #f9f2f4;
+        }
+        #logoBox>div>div{
+          border-right: 0px;
+        }
+        #logoBox>div>div{
+          margin-top: 100px;
+        }
+        #logoBox{
+          height: 700px;
+          display: none;
+          margin-top: 44px;
+          position:fixed;
+          top: 0px;
+          right:0px;
+          bottom:0px;
+          filter: alpha(opacity=60);
+          background-color: #777;
+          z-index: 1002;
+          left: 0px;
+          display:none;
+        }
+        #close{
+          position: absolute;
+          font-size: 20px;
+          size:20px;
+          left:400px;
+          top:20px;
+        }
+        #navbar{
+          padding: 0px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-sm-10 col-xs-10">
+          </div>
+          <div class="col-md-1 col-sm-1 col-xs-2">
+            <广告>
+          </div>
+          <div class="col-md-1 col-sm-1"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <nav id="nav" class="navbar navbar-default">
+      <div class="container">
+        <!-- 折叠上之后 -->
+        <div class="navbar-header">
+          <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#navbar" id="button">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!-- <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#navbar" >
+            <span class="glyphicon glyphicon-apple" aria-hidden="true" ></span>
+          </button> -->
+          <!-- <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#bagBox" id="buttonBag">
+            <span class="glyphicon glyphicon-search" aria-hidden="true" id="bagClick"></span></a>
+          </button> -->
+
+          <!-- <a href="#"><span class="glyphicon glyphicon-apple" aria-hidden="true" ></span></a>
+          <a href="#"><span class="glyphicon glyphicon-apple" aria-hidden="true" ></span></a> -->
+        <!-- </div> -->
+        <!-- 没有折叠的时候 -->
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav container" id="ul">
+              <li><a href="#"><span class="glyphicon glyphicon-apple" aria-hidden="true" ></span></a></li>
+              <li><a href="#">Mac</a></li>
+              <li><a href="#">iPad</a></li>
+              <li><a href="#">iPhone</a></li>
+              <li><a href="#">Watch</a></li>
+              <li><a href="#">Music</a></li>
+              <li><a href="#">技术支持</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true" id="bagClick"></span></a>
+                <div id="bagBox">
+                  <span class="caret" id="caret"></span>
+                  <div id="bag">
+                      <p id="bagText">你的购物袋是空的</p>
+                      <nav>
+                        <ul>
+                          <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><a href="#">购物袋</a></li>
+                          <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><a href="#">收藏</a></li>
+                          <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><a href="#">订单</a></li>
+                          <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><a href="#">账户</a></li>
+                          <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><a id="logo">登录</a></li>
+                        </ul>
+                      </nav>
+                  </div>
+                </div>
+
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 登录窗口 -->
+    <div id="logoBox">
+      <div class="row" style="margin-top:30px;">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+          <div class="well">
+            <h3>用户登录</h3>
+            <span class="glyphicon glyphicon-remove" aria-hidden="true" id="close"></span>
+            <div class="input-group input-group-md">
+              <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+              <input id="username" type="text" class="form-control" placeholder="用户名" aria-describedby="sizing-addon1">
+            </div>
+          <div class="input-group input-group-md">
+            <span class="input-group-addon" id="sizing-addon1"><i class="glyphicon glyphicon-lock"></i></span>
+            <input id="password" type="password" class="form-control" placeholder="密码" aria-describedby="sizing-addon1">
+          </div>
+          <button type="submit" class="btn btn-success btn-block" id="logoin">
+          登录
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="jumbotron" id="temp1">
+        <h2>iPhone 8</h2>
+        <h3>新一代 iPhone。</h3>
+        <div id="img1"></div>
+    </div>
+    <div class="jumbotron" id="temp2">
+        <h2>iPhone X</h2>
+        <h3>hello,未来</h3>
+        <div id="img2"></div>
+    </div>
+    <div class="jumbotron" id="temp3">
+        <h2><span class="glyphicon glyphicon-apple" aria-hidden="true" ></span>WATCH <span id="series">SERIES 3</span></h2>
+        <h3>更自由，更来电</h3>
+        <div id="img3"></div>
+    </div>
+
+    <!-- 有两张图片的div -->
+    <div class="row container" id="towDiv">
+      <div class="col-md-6" id="towDivLeft">
+        <div class="thumbnail" id="thumbnail">
+          <div class="caption" id="caption">
+              <h4>iOS 11</h4>
+              <h5>现已推出。</h5>
+              <div id="img4">
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6" id="towDivRight">
+        <div class="thumbnail" id="thumbnail">
+          <div class="caption" id="caption">
+              <h4>watchOS 4</h4>
+              <h5>现已推出。</h5>
+              <div id="img5">
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 有两张图片的div -->
+    <div class="row" id="towDiv">
+      <div class="col-md-6" id="towDivLeft">
+        <div class="thumbnail" id="thumbnail">
+          <div class="caption" id="caption">
+
+              <div id="img6">
+                <h4>iPhone 年年焕新计划</h4>
+                <h5>每年都有一部新iPhone，<br>并享受AppleCare+全方位服务计划。</h5>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 lastImg" id="towDivRight"  >
+        <div class="thumbnail" id="thumbnail">
+          <div class="caption" id="caption">
+              <h4>macOS High Sierra</h4>
+              <h5>现已推出。</h5>
+              <div id="img7">
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 页尾 -->
+
+
+    <div class="lastTag">
+
+
+      <div class="container" id="last">
+
+      <div role="navigation" class="navbar navbar-default">
+        <div class="container">
+          <!-- 折叠上之后 -->
+          <div class="navbar-header" id="navbar-header">
+            <span href="#" class="navbar-brand" id="xuan">选购及了解</span>
+            <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#navbar1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <!-- 没有折叠的时候 -->
+          <div class="navbar-collapse collapse" id="navbar1">
+            <ul class="nav navbar-nav container" id="bottom">
+                <li><a href="#">Mac</a></li>
+                <li><a href="#">iPad</a></li>
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">Watch</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">iTunes</a></li>
+                <li><a href="#">iPod touch</a></li>
+                <li><a href="#">配件</a></li>
+                <li><a href="#">App Store 充值卡</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div role="navigation" class="navbar navbar-default">
+        <div class="container">
+          <!-- 折叠上之后 -->
+          <div class="navbar-header" id="navbar-header">
+            <span href="#" class="navbar-brand" id="xuan">Apple Store商店</span>
+            <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#navbar2">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <!-- 没有折叠的时候 -->
+          <div class="navbar-collapse collapse" id="navbar2">
+            <ul class="nav navbar-nav container" id="bottom">
+                <li><a href="#">查找零售店</a></li>
+                <li><a href="#">Genius Bar天才吧</a></li>
+                <li><a href="#">Today at Apple</a></li>
+                <li><a href="#">Apple 夏令营</a></li>
+                <li><a href="#">Field Trip课外活动</a></li>
+                <li><a href="#">Apple Store App</a></li>
+                <li><a href="#">翻新和优惠</a></li>
+                <li><a href="#">分期付款</a></li>
+                <li><a href="#">重复使用和循环利用</a></li>
+                <li><a href="#">订单状态</a></li>
+                <li><a href="#">选购帮助</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="">
+        <div role="navigation" class="navbar navbar-default">
+          <div class="container">
+            <!-- 折叠上之后 -->
+            <div class="navbar-header" id="navbar-header">
+              <span href="#" class="navbar-brand" id="xuan">教育应用</span>
+              <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#navbar3">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <!-- 没有折叠的时候 -->
+            <div class="navbar-collapse collapse" id="navbar3">
+              <ul class="nav navbar-nav container" id="bottom">
+                  <li><a href="#">Apple与教育</a></li>
+                  <li><a href="#">搞笑师生选购</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div role="navigation" class="navbar navbar-default">
+          <div class="container">
+            <!-- 折叠上之后 -->
+            <div class="navbar-header" id="navbar-header">
+              <span href="#" class="navbar-brand" id="xuan">商务应用</span>
+              <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#navbar4">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <!-- 没有折叠的时候 -->
+            <div class="navbar-collapse collapse" id="navbar4">
+              <ul class="nav navbar-nav container" id="bottom">
+                  <li><a href="#">查找零售店</a></li>
+                  <li><a href="#">Genius Bar天才吧</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="">
+        <div role="navigation" class="navbar navbar-default">
+          <div class="container">
+            <!-- 折叠上之后 -->
+            <div class="navbar-header" id="navbar-header">
+              <span href="#" class="navbar-brand" id="xuan">账户</span>
+              <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#navbar5">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <!-- 没有折叠的时候 -->
+            <div class="navbar-collapse collapse" id="navbar5">
+              <ul class="nav navbar-nav container" id="bottom">
+                  <li><a href="#">管理你的Apple ID</a></li>
+                  <li><a href="#">Apple Store账户</a></li>
+                  <li><a href="#">iCloud.com</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div role="navigation" class="navbar navbar-default">
+          <div class="container">
+            <!-- 折叠上之后 -->
+            <div class="navbar-header" id="navbar-header">
+              <span href="#" class="navbar-brand" id="xuan">Apple价值观</span>
+              <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#navbar6">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <!-- 没有折叠的时候 -->
+            <div class="navbar-collapse collapse" id="navbar4">
+              <ul class="nav navbar-nav container" id="bottom">
+                  <li><a href="#">查辅助功能</a></li>
+                  <li><a href="#">环境责任</a></li>
+                  <li><a href="#">查隐私</a></li>
+                  <li><a href="#">供应商责任</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div role="navigation" class="navbar navbar-default">
+        <div class="container">
+          <!-- 折叠上之后 -->
+          <div class="navbar-header" id="navbar-header">
+            <span href="#" class="navbar-brand" id="xuan">关于Apple</span>
+            <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#navbar7">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <!-- 没有折叠的时候 -->
+          <div class="navbar-collapse collapse" id="navbar7">
+            <ul class="nav navbar-nav container" id="bottom">
+                <li><a href="#">Newsroom</a></li>
+                <li><a href="#">Apple管理层</a></li>
+                <li><a href="#">工作机会</a></li>
+                <li><a href="#">活动</a></li>
+                <li><a href="#">联系Apple</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+  </body>
+
+  <script src="./js/cookie.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    var isClick = false;
+      $('#button').click(function(){
+        if(isClick == false){
+          // $('#button').text('');
+          // var cha = $('<span></span>').attr('class','glyphicon glyphicon-remove').attr('aria-hidden',true).css({
+          //   color:"white",
+          //   fontSize:"16px"
+          // });
+          // $('#button').append(cha);
+          isClick = true;
+          console.log(isClick);
+          $('#top').hide();
+          $('body').css("overflow","hidden");
+        }else{
+          // $('#button').text('');
+          // var start = $('<span></span>').attr('class',"icon-bar").attr('aria-hidden',true);
+          // var start1 = $('<span></span>').attr('class',"icon-bar").attr('aria-hidden',true);
+          // $('#button').append(start).append(start1);
+          isClick = false;
+          $('#top').show();
+          $('body').css("overflow","auto");
+        }
+      })
+
+
+
+    $('#bagClick').click(function(){
+      $('#bagBox').toggle();
+      var username = getCookie('username');
+      var password = getCookie('password');
+      if(username!=""&&password!=""){
+        $('#logo').text('已登录');
+        $('#logoin').attr('disabled','disabled');
+      }else{
+        $('#logo').text('登录');
+      }
+    })
+    $('#logo').click(function(){
+      $('#top').hide();
+      $('#bagBox').hide();
+      $('body').css("overflow","hidden");
+      $("#logoBox").show();
+      //冲cookie中获取数据
+      var username = getCookie('username');
+      var password = getCookie('password');
+      $('#username').val(username);
+      $('#password').val(password);
+    })
+    $('#close').click(function(){
+      $("#logoBox").hide();
+      $('#top').show();
+      $('body').css("overflow","auto");
+    })
+    $('#logoin').click(function(){
+      var username = $('#username').val();
+      var password = $('#password').val();
+      var nowDate = new Date();
+      nowDate.setDate(nowDate.getDate()+2);
+
+      setCookie('username',username,nowDate);
+      setCookie('password',password,nowDate);
+    })
+
+    $('#buttonBag').click(function(){
+      console.log(111);
+      $('#bagBox').show();
+      $("#bagBox").css({
+        left:"-1000px",
+        zIndex:"1100"
+      })
+    })
+  </script>
+</html>
