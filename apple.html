@@ -9,8 +9,8 @@
     <script src="./js/bootstrap.min.js" charset="utf-8"></script>
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./apple.css">
     <style media="screen">
-
         @media screen and (max-width: 768px){
           #ul>li{
             width:80%;
@@ -85,11 +85,33 @@
             border-left: 0px;
             border-right: 0px;
           }
+          #xuan{
+            padding-left:0px;
+          }
+          #last a{
+            padding: 3px;
+            padding-left: 30px;
+          }
           #navbar-header{
             border-bottom: 1px solid #f8f8f8;
           }
           #nav ul{
             height: 1000px;
+          }
+          #bagBox{
+            left:57%;
+            top:90px;
+            display: none;
+          }
+          #caret{
+            position: relative;
+            left:90%;
+          }
+          #buttonright{
+            display: block;
+          }
+          #btnright{
+            line-height: 62px;
           }
         }
         @media screen and (min-width: 767px){
@@ -184,232 +206,26 @@
             text-decoration: underline;
           }
           #bagBox{
-            left:-77px;
+            left:77.7%;
+            top:78px;
             display: none;
+          }
+          #caret{
+            position: relative;
+            left:48%;
           }
           #top{
             display: block;
           }
-        }
-
-
-        #top{
-          height: 44px;
-          color: #a8a8aa;
-          background-color: #444444;
-          /*font-size: 12px;*/
-        }
-        .col-xs-2{
-          font-size: 12px;
-          text-align: right;
-        }
-        .col-md-1,.col-sm-1{
-          font-size: 12px;
-          /*text-align: center;*/
-        }
-        .row{
-          line-height: 44px;
-        }
-        #nav{
-          margin: 0px;
-          border: 0px;
-          border-radius: 0;
-          background-color: #32302d;
-        }
-        ul>li{
-          text-align: center;
-          text-align: left;
-          margin: 0 auto;
-        }
-        ul{
-          background-color: #32302d;
-        }
-        #ul>li>a{
-          color: white;
-        }
-        #ul a:hover{
-          opacity: .5;
-        }
-        #button{
-          border: 0px;
-          float: left;
-          background-color: #32302d;
-        }
-        #navbar{
-          border-top: 0px;
-        }
-        #temp1,#temp2{
-          padding-bottom: 0px;
-          margin-bottom: 12px;
-        }
-        #temp1{
-          background-color:#f9f0eb;
-          margin-bottom: 10px;
-        }
-        #temp2,#temp3{
-          background-color: #fafafa;
-          margin-bottom: 10px;
-        }
-        #temp1 h2,#temp2 h2,#temp3 h2,h4{
-          padding-top: 39px;
-          color: #111;
-        }
-
-        #temp1 h2,#temp1 h3,#temp2 h2,#temp2 h3,#temp3 h2,#temp3 h3{
-          text-align: center;
-        }
-
-        #series{
-          display: block;
-          text-align: center;
-          color: red;
-        }
-        .caption{
-          background-color: #fafafa;
-        }
-        .thumbnail{
-          border: 0px;
-          /*padding: 0px;*/
-        }
-        h4{
-          text-align: center;
-        }
-        h5{
-          text-align: center;
-        }
-        #towDivLeft{
-          /*background-color: #fafafa;*/
-          /*margin-right: 1px;*/
-          padding-left: 5px;
-          padding-right: 5px;
-        }
-        #towDivRight{
-          padding: 0px;
-          padding-right: 5px;
-        }
-        #thumbnail{
-          margin-bottom: 0px;
-          /*padding: 0px;*/
-        }
-        #caption{
-          padding: 0px;
-        }
-        #towDiv{
-          width:100%;
-          padding: 0px;
-          margin: 0px;
-        }
-        #bottom{
-          background-color: #f8f8f8;
-        }
-        #bottom a{
-          color: #555;
-          font-size: 8px;
-          padding: 3px 0px;
-          text-decoration: none;
-        }
-        #bottom li {
-          float: none;
-        }
-        #bagBox{
-          display: none;
-          position: absolute;
-          top:33px;
-        }
-        #bag{
-          background-color: white;
-          border: 1px solid #f8f8f8;
-          width:280px;
-          padding: 0 20px;
-          height: 307px;
-        }
-        #bag ul{
-          background-color: white;
-          padding-left: 0px;
-        }
-        #bagText{
-          color: #888;
-          padding: 35px 0;
-          margin: 0;
-          text-align: center;
-        }
-        #bagBox li{
-          list-style: none;
-          height: 43px;
-          line-height: 43px;
-          border-top: 1px solid #e3e3e3;
-        }
-        #bagBox li span{
-          line-height: 43px;
-          padding-right: 10px;
-        }
-        #bagBox a{
-          cursor: pointer;
-        }
-        #caret{
-          border-bottom: 10px solid white;
-          border-top: 10px solid transparent;
-          border-right: 10px solid transparent;
-          border-left: 10px solid transparent;
-        }
-        #xuan{
-          color:#000;
-          font-size: 8px;
-        }
-        #last{
-          background-color: #f8f8f8;
-        }
-        .lastTag{
-          background-color: #f8f8f8;
-        }
-        #logoBox .input-group{
-          margin:10px 0px;
-        }
-        #logoBox>div{
-          width: 100%;
-        }
-        #logoBox h3{
-          padding:5px;
-          border-bottom:1px solid #ddd;
+          #buttonright{
+            display: none;
           }
-        #logoBox li{
-          list-style-type:square;
-          margin:10px 0;
-        }
-        #logoBox em{
-          color:#c7254e;
-          font-style: inherit;
-          background-color: #f9f2f4;
-        }
-        #logoBox>div>div{
-          border-right: 0px;
-        }
-        #logoBox>div>div{
-          margin-top: 100px;
-        }
-        #logoBox{
-          height: 700px;
-          display: none;
-          margin-top: 44px;
-          position:fixed;
-          top: 0px;
-          right:0px;
-          bottom:0px;
-          filter: alpha(opacity=60);
-          background-color: #777;
-          z-index: 1002;
-          left: 0px;
-          display:none;
-        }
-        #close{
-          position: absolute;
-          font-size: 20px;
-          size:20px;
-          left:400px;
-          top:20px;
-        }
-        #navbar{
-          padding: 0px;
+          #bottom a{
+            color: #555;
+            font-size: 8px;
+            padding: 3px 0px;
+            text-decoration: none;
+          }
         }
     </style>
   </head>
@@ -437,16 +253,13 @@
             <span class="icon-bar"></span>
           </button>
 
-          <!-- <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#navbar" >
+          <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#" id="buttoncenter">
             <span class="glyphicon glyphicon-apple" aria-hidden="true" ></span>
-          </button> -->
-          <!-- <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#bagBox" id="buttonBag">
-            <span class="glyphicon glyphicon-search" aria-hidden="true" id="bagClick"></span></a>
-          </button> -->
-
-          <!-- <a href="#"><span class="glyphicon glyphicon-apple" aria-hidden="true" ></span></a>
-          <a href="#"><span class="glyphicon glyphicon-apple" aria-hidden="true" ></span></a> -->
-        <!-- </div> -->
+          </button>
+          <button id="buttonright">
+            <span class="glyphicon glyphicon-search" aria-hidden="true" id="btnright"></span></a>
+          </button>
+        </div>
         <!-- 没有折叠的时候 -->
 
         <div id="navbar" class="navbar-collapse collapse">
@@ -459,35 +272,36 @@
               <li><a href="#">Music</a></li>
               <li><a href="#">技术支持</a></li>
               <li><a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
-              <li><a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true" id="bagClick"></span></a>
-                <div id="bagBox">
-                  <span class="caret" id="caret"></span>
-                  <div id="bag">
-                      <p id="bagText">你的购物袋是空的</p>
-                      <nav>
-                        <ul>
-                          <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><a href="#">购物袋</a></li>
-                          <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><a href="#">收藏</a></li>
-                          <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><a href="#">订单</a></li>
-                          <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><a href="#">账户</a></li>
-                          <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><a id="logo">登录</a></li>
-                        </ul>
-                      </nav>
-                  </div>
-                </div>
-
+              <li><a href="#"><span class="glyphicon glyphicon-modal-window" aria-hidden="true" id="bagClick"></span></a>
               </li>
           </ul>
         </div>
       </div>
     </nav>
 
+    <!-- 购物车 -->
+    <div id="bagBox">
+      <span class="caret" id="caret"></span>
+      <div id="bag">
+          <p id="bagText">你的购物袋是空的</p>
+          <nav>
+            <ul>
+              <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><a href="#">购物袋</a></li>
+              <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><a href="#">收藏</a></li>
+              <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><a href="#">订单</a></li>
+              <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><a href="#">账户</a></li>
+              <li><span class="glyphicon glyphicon-heart" aria-hidden="true"></span><a id="logo">登录</a></li>
+            </ul>
+          </nav>
+      </div>
+    </div>
+
     <!-- 登录窗口 -->
     <div id="logoBox">
       <div class="row" style="margin-top:30px;">
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-3 col-xs-3">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6 col-xs-6">
           <div class="well">
             <h3>用户登录</h3>
             <span class="glyphicon glyphicon-remove" aria-hidden="true" id="close"></span>
@@ -592,9 +406,7 @@
           <div class="navbar-header" id="navbar-header">
             <span href="#" class="navbar-brand" id="xuan">选购及了解</span>
             <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#navbar1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+              <span class="glyphicon glyphicon-plus open"></span>
             </button>
           </div>
           <!-- 没有折叠的时候 -->
@@ -621,9 +433,7 @@
           <div class="navbar-header" id="navbar-header">
             <span href="#" class="navbar-brand" id="xuan">Apple Store商店</span>
             <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#navbar2">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+              <span class="glyphicon glyphicon-plus open"></span>
             </button>
           </div>
           <!-- 没有折叠的时候 -->
@@ -652,9 +462,7 @@
             <div class="navbar-header" id="navbar-header">
               <span href="#" class="navbar-brand" id="xuan">教育应用</span>
               <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#navbar3">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="glyphicon glyphicon-plus open"></span>
               </button>
             </div>
             <!-- 没有折叠的时候 -->
@@ -674,9 +482,7 @@
             <div class="navbar-header" id="navbar-header">
               <span href="#" class="navbar-brand" id="xuan">商务应用</span>
               <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#navbar4">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="glyphicon glyphicon-plus open"></span>
               </button>
             </div>
             <!-- 没有折叠的时候 -->
@@ -699,9 +505,7 @@
             <div class="navbar-header" id="navbar-header">
               <span href="#" class="navbar-brand" id="xuan">账户</span>
               <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#navbar5">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="glyphicon glyphicon-plus open"></span>
               </button>
             </div>
             <!-- 没有折叠的时候 -->
@@ -722,9 +526,7 @@
             <div class="navbar-header" id="navbar-header">
               <span href="#" class="navbar-brand" id="xuan">Apple价值观</span>
               <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#navbar6">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="glyphicon glyphicon-plus open"></span>
               </button>
             </div>
             <!-- 没有折叠的时候 -->
@@ -747,9 +549,7 @@
           <div class="navbar-header" id="navbar-header">
             <span href="#" class="navbar-brand" id="xuan">关于Apple</span>
             <button type="button" name="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" aria-controls="navbar" data-target="#navbar7">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
+              <span class="glyphicon glyphicon-plus open"></span>
             </button>
           </div>
           <!-- 没有折叠的时候 -->
@@ -764,84 +564,9 @@
           </div>
         </div>
       </div>
-
     </div>
     </div>
-
   </body>
-
   <script src="./js/cookie.js" charset="utf-8"></script>
-  <script type="text/javascript">
-    var isClick = false;
-      $('#button').click(function(){
-        if(isClick == false){
-          // $('#button').text('');
-          // var cha = $('<span></span>').attr('class','glyphicon glyphicon-remove').attr('aria-hidden',true).css({
-          //   color:"white",
-          //   fontSize:"16px"
-          // });
-          // $('#button').append(cha);
-          isClick = true;
-          console.log(isClick);
-          $('#top').hide();
-          $('body').css("overflow","hidden");
-        }else{
-          // $('#button').text('');
-          // var start = $('<span></span>').attr('class',"icon-bar").attr('aria-hidden',true);
-          // var start1 = $('<span></span>').attr('class',"icon-bar").attr('aria-hidden',true);
-          // $('#button').append(start).append(start1);
-          isClick = false;
-          $('#top').show();
-          $('body').css("overflow","auto");
-        }
-      })
-
-
-
-    $('#bagClick').click(function(){
-      $('#bagBox').toggle();
-      var username = getCookie('username');
-      var password = getCookie('password');
-      if(username!=""&&password!=""){
-        $('#logo').text('已登录');
-        $('#logoin').attr('disabled','disabled');
-      }else{
-        $('#logo').text('登录');
-      }
-    })
-    $('#logo').click(function(){
-      $('#top').hide();
-      $('#bagBox').hide();
-      $('body').css("overflow","hidden");
-      $("#logoBox").show();
-      //冲cookie中获取数据
-      var username = getCookie('username');
-      var password = getCookie('password');
-      $('#username').val(username);
-      $('#password').val(password);
-    })
-    $('#close').click(function(){
-      $("#logoBox").hide();
-      $('#top').show();
-      $('body').css("overflow","auto");
-    })
-    $('#logoin').click(function(){
-      var username = $('#username').val();
-      var password = $('#password').val();
-      var nowDate = new Date();
-      nowDate.setDate(nowDate.getDate()+2);
-
-      setCookie('username',username,nowDate);
-      setCookie('password',password,nowDate);
-    })
-
-    $('#buttonBag').click(function(){
-      console.log(111);
-      $('#bagBox').show();
-      $("#bagBox").css({
-        left:"-1000px",
-        zIndex:"1100"
-      })
-    })
-  </script>
+  <script src="./apple.js" charset="utf-8"></script>
 </html>
